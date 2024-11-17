@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: rgb(138,248,219);
+  background: radial-gradient(circle, rgba(138,248,219,1) 0%, rgba(215,255,246,1) 51%, rgba(227,249,255,1) 99%);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Flower Section: Parallax + Witty Line */
+.flower-section {
+  position: relative;
+  height: 100vh; /* Full screen height for the first section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+}
+
+.flower-image {
+  width: 40%; /* Image width reduced to 40% */
+  height: auto;
+  object-fit: contain;
+  animation: parallaxEffect 6s ease-out infinite alternate;
+}
+
+.witty-line {
+  position: absolute;
+  bottom: 20%; /* Placed slightly above the bottom */
+  font-size: 3rem;
+  font-family: 'Cursive', sans-serif;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.flower-section:hover .witty-line {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes parallaxEffect {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+/* Welcome Section: Smooth Entry + Description */
+.welcome-section {
+  height: 100vh; /* Full screen height for the welcome section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #333; /* Dark text for readability */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.welcome-section h1 {
+  font-size: 3.5rem; /* Larger title */
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  max-width: 900px;
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  margin-top: 20px;
+}
+
+.welcome-section.visible h1,
+.welcome-section.visible p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .welcome-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-section p {
+    font-size: 1rem;
+  }
+
+  .flower-image {
+    width: 50%;
+  }
+}
+
+  

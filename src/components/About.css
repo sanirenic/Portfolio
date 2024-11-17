@@ -1,0 +1,107 @@
+/* About Section */
+.about {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #e0f7e9, #a0d8a7); /* Smooth gradient */
+  color: #333;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Lora', serif; /* Lora for elegant paragraph text */
+}
+
+/* Tile Design for About Content */
+.about-content {
+  max-width: 900px;
+  background-color: #e0e0e0; /* Soft light grey for contrast */
+  border-radius: 20px; 
+  padding: 60px 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1.5s ease-out;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  overflow: hidden;
+}
+
+/* Hover Effect for the Tile */
+.about-content:hover {
+  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2), 0 10px 25px rgba(75, 111, 68, 0.3); /* Enhanced shadow */
+  background: linear-gradient(145deg, #dffcf8, #fdeaff); /* Subtle hover gradient change */
+}
+
+
+/* Heading Styles */
+.about h2 {
+  font-size: 3rem; /* Larger, more prominent heading */
+  margin-bottom: 30px; /* Increased margin for space */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #4b6f44; /* Green accent */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  font-weight: bold;
+  position: relative;
+}
+
+/* Remove extra line from the heading */
+.about h2::after {
+  content: none;
+}
+
+/* Paragraph Text Styles */
+.about p {
+  font-size: 1.25rem; /* Larger text for readability */
+  line-height: 1.8;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  word-wrap: break-word;
+  margin-bottom: 30px;
+}
+
+/* Animation for Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 50px 15px;
+  }
+  .about h2 {
+    font-size: 2.5rem;
+  }
+  .about p {
+    font-size: 1.1rem;
+    column-count: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
