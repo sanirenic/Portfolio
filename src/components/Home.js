@@ -16,9 +16,8 @@ const Home = () => {
       {/* Flower Section with Image and Witty Line */}
       <section className="flower-section">
         <img 
-          src="download__3_-removebg-preview.png"// Replace with your flower image URL
-          alt="Flower"
-          className="flower-image"
+         src={`${process.env.PUBLIC_URL}/download__3_-removebg-preview.png`} alt="Flower" 
+         className="flower-image"
         />
         <div className="witty-line">
           I code, I design, I bloom like this flower!
