@@ -16,7 +16,8 @@
   /* Project Page Styles */
   .projects {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #a8c9a3, #c9e0d3); /* Soft gradient background */
+    background: rgb(138,248,219);
+    background: radial-gradient(circle, rgba(138,248,219,1) 0%, rgba(215,255,246,1) 51%, rgba(227,249,255,1) 99%);
     text-align: center;
     min-height: 100vh;
     position: relative;
@@ -24,9 +25,9 @@
   
   .projects h2 {
     font-size: 3.5rem;
-    margin-bottom: 30px;
-    font-family: 'Poppins', sans-serif;
-    color: #4b6f44;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    color: #2e3b4e;
     text-transform: uppercase;
     letter-spacing: 4px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
@@ -54,12 +55,14 @@
     flex-direction: column; /* Stack the tiles vertically */
     gap: 40px; /* Increase gap between projects */
     padding: 0 20px;
+    margin-top: 40px; /* Increase the margin for better balance */
     align-items: center; /* Center the content horizontally */
   }
   
   /* Project Card Styles */
   .project-card {
-    background: linear-gradient(135deg, #c4ffd2, #c5d7ff); /* Gradient from light green to sage */
+    background: rgb(208,207,255);
+    background: linear-gradient(146deg, rgba(208,207,255,1) 0%, rgba(224,250,255,1) 60%);
     border-radius: 12px; /* Rounded corners */
     padding: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
@@ -73,6 +76,8 @@
   }
   
   .project-card:hover {
+    background: rgb(255,195,240);
+    background: radial-gradient(circle, rgba(255,195,240,1) 0%, rgba(229,255,253,1) 60%);
     transform: translateY(-10px); /* Slight lift on hover */
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
   }
@@ -105,6 +110,7 @@
     margin-bottom: 12px;
     color: #202020;
     line-height: 1.4;
+    
   }
   
   .project-tags {
@@ -124,7 +130,8 @@
   }
   
   .project-button {
-    background: linear-gradient(145deg, #4b6f44, #6cbf6b); /* Green gradient */
+    background: rgb(0,50,123);
+    background: linear-gradient(41deg, rgba(0,50,123,1) 0%, rgba(0,255,231,1) 100%);
     color: #fff;
     padding: 12px 30px;
     font-size: 1.2rem;
@@ -141,7 +148,7 @@
   }
   
   .project-button:hover {
-    background: linear-gradient(145deg, #6cbf6b, #4b6f44); /* Reversed gradient */
+    background: linear-gradient(145deg, #00ffe7, #00327b); /* Reversed gradient */
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }

@@ -9,45 +9,49 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #f5f5f5;
   overflow-x: hidden;
+  color: #333;
 }
 
 /* Header Styles */
 .header {
   position: sticky;
   top: 0;
-  background: #A8CBB5; /* Sage green background */
+  background: linear-gradient(135deg, #2C3E50, #1ABC9C); /* Dark blue to teal gradient */
   color: white;
-  padding: 20px 80px; /* Padding for top/bottom and left/right */
+  padding: 15px 60px; /* Reduced padding for a more compact header */
   display: flex;
-  justify-content: space-between; /* Distribute space evenly */
+  justify-content: space-between;
   align-items: center;
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 40px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Slightly softer shadow */
   transition: all 0.3s ease;
   z-index: 1000;
+  animation: slideIn 1s ease-out;
 }
 
 /* Logo Styling */
 .logo h1 {
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 32px; /* Larger font for emphasis */
+  letter-spacing: 2px; /* Space out letters for a dramatic effect */
+  font-family: 'Cinzel', serif; /* Elegant and dramatic font */
   text-transform: uppercase;
-  color: white;
+  color: #00ede1; /* Gold color for contrast */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: all 0.3s ease;
 }
+
+.logo h1:hover {
+  color: #E67E22; /* Warm orange for hover effect */
+  transform: scale(1.1); /* Slight enlargement on hover */
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5); /* More intense shadow on hover */
+}
+
 
 /* Navigation Styling */
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px; /* Space between each nav item */
-  list-style: none;
-}
-
 .nav ul {
   display: flex;
-  gap: 40px; /* Space between nav items */
+  gap: 30px; /* Reduced gap between items */
+  list-style: none;
 }
 
 .nav ul li {
@@ -59,23 +63,26 @@ body {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease;
-  padding: 10px 15px; /* Added padding for better click area */
-  border-radius: 5px; /* Rounded border on hover */
+  padding: 12px 18px; /* Adjusted padding for a balanced look */
+  border-radius: 6px;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  display: block;
 }
 
 /* Hover effect on links */
 .nav ul li a:hover {
-  color: #ffffff; /* White color for hover */
-  background-color: #78b9a3; /* Softer light green background */
-  transform: translateY(-5px); /* Slight lift effect */
+  background-color: #00ede1; /* Lighter teal on hover */
+  color: rgb(0, 0, 0);
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Clearer hover box visibility */
 }
 
 /* Active link styling */
 .nav ul li a.active {
   color: #FFD700;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 4px solid #FFD700;
 }
 
 /* Mobile Responsive */
@@ -83,41 +90,64 @@ body {
   .nav ul {
     display: none;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     position: absolute;
     top: 80px;
     right: 20px;
-    background-color: #A8CBB5;
+    background-color: #2C3E50; /* Dark blue background for mobile */
     padding: 20px;
-    border-radius: 10px;
-  }
-
-  .nav ul li a {
-    font-size: 20px;
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
   }
 
   .nav.open ul {
     display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s 0s;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger.open div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 6px;
+  }
+
+  .hamburger.open div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open div:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -6px;
   }
 }
 
-/* Hamburger Icon for Mobile */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.hamburger div {
-  width: 30px;
-  height: 4px;
-  background-color: white;
-  border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
+/* Header Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 

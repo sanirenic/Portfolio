@@ -1,7 +1,8 @@
 /* About Section */
 .about {
   padding: 80px 20px;
-  background: linear-gradient(to bottom, #e0f7e9, #a0d8a7); /* Smooth gradient */
+  background: rgb(138,248,219);
+  background: radial-gradient(circle, rgba(138,248,219,1) 0%, rgba(215,255,246,1) 51%, rgba(227,249,255,1) 99%);
   color: #333;
   text-align: center;
   min-height: 60vh;
@@ -17,7 +18,7 @@
 /* Tile Design for About Content */
 .about-content {
   max-width: 900px;
-  background-color: #e0e0e0; /* Soft light grey for contrast */
+  background: linear-gradient(145deg, #ffffff, #f1f1f1); /* Subtle gradient for tile */
   border-radius: 20px; 
   padding: 60px 50px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -29,9 +30,10 @@
 
 /* Hover Effect for the Tile */
 .about-content:hover {
-  transform: translateY(-10px); /* Slight lift effect */
+  transform: translateY(-20px); /* Slight lift effect */
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2), 0 10px 25px rgba(75, 111, 68, 0.3); /* Enhanced shadow */
-  background: linear-gradient(145deg, #dffcf8, #fdeaff); /* Subtle hover gradient change */
+  background: rgb(255,195,240);
+  background: radial-gradient(circle, rgba(255,195,240,1) 0%, rgba(229,255,253,1) 60%);
 }
 
 
@@ -41,11 +43,12 @@
   margin-bottom: 30px; /* Increased margin for space */
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #4b6f44; /* Green accent */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
-  font-weight: bold;
+  color: #2e3b4e; /* Green accent */
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  font-weight: 700;
   position: relative;
+  
 }
 
 /* Remove extra line from the heading */
@@ -60,11 +63,26 @@
   color: #555;
   max-width: 800px;
   margin: 0 auto;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Merriweather', serif; /* Elegant serif font for paragraph */
   font-weight: 300;
   text-align: center;
   word-wrap: break-word;
   margin-bottom: 30px;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  
+}
+
+/* Hover Effect for the Paragraph */
+.about p:hover {
+  color: #2a3a3f; /* Darker text color on hover for emphasis */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Paragraph Animation */
+.about-content.visible p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Animation for Fade In */
@@ -85,10 +103,10 @@
     padding: 50px 15px;
   }
   .about h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   .about p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     column-count: 1;
   }
 }

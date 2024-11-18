@@ -16,7 +16,7 @@ const Home = () => {
       {/* Flower Section with Image and Witty Line */}
       <section className="flower-section">
         <img 
-          src="https://via.placeholder.com/400" // Replace with your flower image URL
+          src="download__3_-removebg-preview.png"// Replace with your flower image URL
           alt="Flower"
           className="flower-image"
         />

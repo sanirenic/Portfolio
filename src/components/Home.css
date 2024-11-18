@@ -11,7 +11,7 @@ body {
 /* Flower Section: Parallax + Witty Line */
 .flower-section {
   position: relative;
-  height: 100vh; /* Full screen height for the first section */
+  height: 80vh; /* Full screen height for the first section */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,27 +20,10 @@ body {
 }
 
 .flower-image {
-  width: 40%; /* Image width reduced to 40% */
+  width: 20%; /* Image width reduced to 40% */
   height: auto;
   object-fit: contain;
-  animation: parallaxEffect 6s ease-out infinite alternate;
-}
-
-.witty-line {
-  position: absolute;
-  bottom: 20%; /* Placed slightly above the bottom */
-  font-size: 3rem;
-  font-family: 'Cursive', sans-serif;
-  color: #fff;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.flower-section:hover .witty-line {
-  opacity: 1;
-  transform: translateY(0);
+  animation: parallaxEffect 6s ease-out infinite alternate, zoomEffect 4s ease-in-out infinite alternate;
 }
 
 @keyframes parallaxEffect {
@@ -52,33 +35,84 @@ body {
   }
 }
 
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Slight zoom in */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.witty-line {
+  position: absolute;
+  bottom: 10%; /* Placed slightly higher for better visibility */
+  font-size: 3rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  color: #001156;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Text shadow for better visibility */
+  letter-spacing: 2px;
+  z-index: 20;
+}
+
+/* Apply the subtle fade-in effect */
+.witty-line {
+  animation: subtleFadeIn 1s ease-out forwards; /* Animation for smooth fade-in */
+}
+
+.flower-section:hover .witty-line {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.flower-section .witty-line:hover {
+  color: #ff008c; /* Gold color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
 /* Welcome Section: Smooth Entry + Description */
+/* Welcome Section */
 .welcome-section {
-  height: 100vh; /* Full screen height for the welcome section */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #333; /* Dark text for readability */
   padding: 0 20px;
   box-sizing: border-box;
+  color: #333; /* Darker color for contrast */
 }
 
+/* Welcome Section Title */
 .welcome-section h1 {
-  font-size: 3.5rem; /* Larger title */
+  font-size: 4rem; /* Larger font size for emphasis */
+  font-family: 'Lora', serif; /* Elegant, serif font for a welcoming feel */
   font-weight: 700;
   letter-spacing: 2px;
+  color: #2e3b4e; /* A deep color for the title */
   margin-bottom: 20px;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1.5s ease, transform 1.5s ease;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for text contrast */
 }
 
+/* Welcome Section Description */
 .welcome-section p {
-  font-size: 1.2rem;
+  font-size: 1.3rem; /* Slightly larger description text */
+  font-family: 'Arial', sans-serif;
   max-width: 900px;
   line-height: 1.8;
+  color: #5a6473; /* Slightly lighter gray for the description */
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1.5s ease, transform 1.5s ease;
@@ -87,8 +121,26 @@ body {
 
 .welcome-section.visible h1,
 .welcome-section.visible p {
-  opacity: 1;
+  opacity: 5;
   transform: translateY(0);
+}
+
+.welcome-section .cta-btn {
+  background-color: #78b9a3; /* Soft green background */
+  color: white;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.welcome-section .cta-btn:hover {
+  background-color: #66a79d; /* Slightly darker green on hover */
+  transform: translateY(-5px); /* Lift effect */
 }
 
 @media (max-width: 768px) {

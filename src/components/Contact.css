@@ -1,7 +1,8 @@
 /* Contact Section */
 .contact {
     padding: 80px 20px;
-    background: linear-gradient(to bottom, #a8c9a3, #c9e0d3); /* Updated gradient */
+    background: rgb(138,248,219);
+    background: radial-gradient(circle, rgba(138,248,219,1) 0%, rgba(215,255,246,1) 51%, rgba(227,249,255,1) 99%);
     color: #333;
     text-align: center;
     border-radius: 10px;
@@ -12,10 +13,11 @@
     font-size: 3.5rem;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
-    color: #4b6f44;
+    color: #2e3b4e;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    animation: fadeInDown 1s ease-in-out;
   }
   
   .contact-info {
@@ -34,7 +36,7 @@
   }
   
   .contact-info a {
-    color: #4b6f44;
+    color: #2e3b4e;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -53,7 +55,7 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
-    color: #4b6f44;
+    color: #2e3b4e;
   }
   
   .contact-form form {
@@ -67,7 +69,7 @@
   .contact-form label {
     margin-bottom: 8px;
     font-weight: bold;
-    color: #4b6f44;
+    color: #2e3b4e;
   }
   
   /* Input and Textarea Styles */
@@ -82,15 +84,29 @@
     transition: all 0.3s ease;
     font-size: 1rem;
     background-color: #f4f4f4;
+    
   }
   
   .contact-form input:focus,
   .contact-form textarea:focus {
-    border: 2px solid #4b6f44;
+    border: 2px solid #007b89;
     box-shadow: 0 0 10px rgba(75, 111, 68, 0.3);
     outline: none;
     background-color: #fff; /* White background on focus */
   }
+
+  .contact-form input.error,
+.contact-form textarea.error {
+    border: 2px solid #e63946; /* Red border for errors */
+    background-color: #ffe6e6; /* Light red background */
+}
+
+.contact-form label.error {
+    color: #e63946; /* Red text for error messages */
+    font-size: 0.9rem;
+    margin-top: -10px;
+    display: block;
+}
   
   .contact-form input::placeholder,
   .contact-form textarea::placeholder {
@@ -106,19 +122,22 @@
   /* Submit Button */
   .contact-form button {
     padding: 14px 30px;
-    background: linear-gradient(135deg, #4b6f44, #3a5732); /* Gradient background */
+    background: rgb(0,50,123);
+    background: linear-gradient(41deg, rgba(0,50,123,1) 0%, rgba(0,255,231,1) 100%);
     color: white;
     border: none;
     border-radius: 12px;
     cursor: pointer;
     font-size: 1.2rem;
     margin-top: 20px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
   }
   
   .contact-form button:hover {
-    background: linear-gradient(135deg, #3a5732, #4b6f44); /* Reverse gradient */
+    background: linear-gradient(135deg, #00ffe7, #00327b); /* Reverse gradient */
     transform: scale(1.05);
   }
   
@@ -144,4 +163,30 @@
   .map iframe:hover {
     opacity: 0.9;
   }
+
+  @media (max-width: 768px) {
+    .contact {
+        padding: 40px 10px; /* Reduce padding for smaller screens */
+    }
+
+    .contact h2 {
+        font-size: 2.5rem; /* Adjust heading size */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 12px 20px; /* Adjust button size */
+    }
+
+    .contact-form form {
+        max-width: 100%; /* Make form width fluid */
+    }
+}
+
   
