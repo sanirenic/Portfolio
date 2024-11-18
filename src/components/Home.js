@@ -21,7 +21,7 @@ const Home = () => {
           className="flower-image"
         />
         <div className="witty-line">
-          "I code, I design, I bloom like this flower!"
+          I code, I design, I bloom like this flower!
         </div>
       </section>
 

@@ -72,7 +72,7 @@ body {
 /* Hover effect on links */
 .nav ul li a:hover {
   background-color: #00ede1; /* Lighter teal on hover */
-  color: rgb(0, 0, 0);
+  color: rgb(162, 9, 9);
   transform: translateY(-4px);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Clearer hover box visibility */
 }
