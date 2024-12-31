@@ -16,7 +16,7 @@ const Home = () => {
       {/* Flower Section with Image and Witty Line */}
       <section className="flower-section">
         <img 
-         src={`${process.env.PUBLIC_URL}/download__3_-removebg-preview.png`} alt="Flower" 
+         src={`${process.env.PUBLIC_URL}/crocus_watercolor-removebg-preview.png`} alt="Flower" 
          className="flower-image"
         />
         <div className="witty-line">

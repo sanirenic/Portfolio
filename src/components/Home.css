@@ -20,7 +20,7 @@ body {
 }
 
 .flower-image {
-  width: 20%; /* Image width reduced to 40% */
+  width: 35%; /* Image width reduced to 40% */
   height: auto;
   object-fit: contain;
   animation: parallaxEffect 6s ease-out infinite alternate, zoomEffect 4s ease-in-out infinite alternate;
