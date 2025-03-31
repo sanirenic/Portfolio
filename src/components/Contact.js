@@ -31,7 +31,7 @@ function Contact() {
         <h3>Contact Information</h3>
         <ul>
           <li>Email: <a href="mailto:youremail@example.com">sanjana113btcsai22@igdtuw.ac.in</a></li>
-          <li>Phone: +91=9319084525</li>
+          <li>Phone: +91-9319084525</li>
           <li>Social: <a href="https://www.linkedin.com/in/sanjana-bamnavat-368759259/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
         </ul>
       </div>

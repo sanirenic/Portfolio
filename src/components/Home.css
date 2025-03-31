@@ -11,7 +11,7 @@ body {
 /* Flower Section: Parallax + Witty Line */
 .flower-section {
   position: relative;
-  height: 80vh; /* Full screen height for the first section */
+  height: 88vh; /* Full screen height for the first section */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,8 +49,8 @@ body {
 
 .witty-line {
   position: absolute;
-  bottom: 10%; /* Placed slightly higher for better visibility */
-  font-size: 3rem;
+  bottom: 8%; /* Placed slightly higher for better visibility */
+  font-size: 2rem;
   font-family: 'Dancing Script', cursive;
   font-weight: bold;
   color: #001156;
@@ -81,7 +81,7 @@ body {
 /* Welcome Section: Smooth Entry + Description */
 /* Welcome Section */
 .welcome-section {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,7 +99,7 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
   color: #2e3b4e; /* A deep color for the title */
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1.5s ease, transform 1.5s ease;
